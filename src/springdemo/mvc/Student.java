@@ -8,6 +8,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import springdemo.mvc.validation.CourseCode;
+
 public class Student {
 	
 	private String firstName;
@@ -23,6 +25,9 @@ public class Student {
 	
 	@Pattern(regexp="[a-zA-Z][0-9][a-zA-z] [0-9][a-zA-z][0-9]", message="It should follow pattern \"A1B 2RC\".")
 	private String postalCode;
+	
+	@CourseCode(value={"LUV", "TOP"} /*,message="must start with LUV or TOP"*/)
+	private String courseCode;
 	
 	private String country;
 	
@@ -102,6 +107,14 @@ public class Student {
 
 	public void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
+	}
+
+	public String getCourseCode() {
+		return courseCode;
+	}
+
+	public void setCourseCode(String courseCode) {
+		this.courseCode = courseCode;
 	}
 	
 	

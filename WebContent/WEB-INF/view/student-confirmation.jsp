@@ -17,7 +17,8 @@ Free passes: ${student.freePasses }.
 <br><br>
 Postal Code: ${student.postalCode }.
 <br><br>
-
+Course Code: ${student.courseCode }.
+<br><br>
 The student's favorite language is: ${student.favoriteLanguage}!
 <br><br>
 The students use operating systems: 

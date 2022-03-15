@@ -35,6 +35,11 @@
 		<br>
 		<br>
 		
+	Course Code: <form:input path="courseCode" />
+		<form:errors path="courseCode" class="error" />
+		<br>
+		<br>	
+		
 	Country: <form:select path="country">
 			<!--<form:option value="Brazil" label="Brazil" />
 			<form:option value="Canada" label="Canada" />
