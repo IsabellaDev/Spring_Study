@@ -2,10 +2,23 @@ package springdemo.mvc;
 
 import java.util.LinkedHashMap;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class Student {
 	
 	private String firstName;
+	
+	@NotNull(message="Last name is required.") //validation rules
+	@Size(min=1, message="Last name is required.")
 	private String lastName;
+	
+	@Min(value=0, message="It must be greater than or equal to 0.")
+	@Max(value=10, message="It must be less than or equal to 10.")
+	private int freePasses;
+	
 	private String country;
 	
 	private LinkedHashMap<String, String> countryOptions;
@@ -69,5 +82,15 @@ public class Student {
 	public void setOperatingSystems(String[] operatingSystems) {
 		this.operatingSystems = operatingSystems;
 	}
+
+	public int getFreePasses() {
+		return freePasses;
+	}
+
+	public void setFreePasses(int freePasses) {
+		this.freePasses = freePasses;
+	}
+	
+	
 	
 }

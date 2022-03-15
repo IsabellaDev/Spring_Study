@@ -13,6 +13,7 @@
 The student is confirmed: ${student.firstName} ${student.lastName}!
 The student is from: ${student.country}!
 <br><br>
+Free passes: ${student.freePasses }. 
 The student's favorite language is: ${student.favoriteLanguage}!
 <br><br>
 The students use operating systems: 
