@@ -5,6 +5,7 @@ import java.util.LinkedHashMap;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class Student {
@@ -18,6 +19,9 @@ public class Student {
 	@Min(value=0, message="It must be greater than or equal to 0.")
 	@Max(value=10, message="It must be less than or equal to 10.")
 	private int freePasses;
+	
+	@Pattern(regexp="[a-zA-Z][0-9][a-zA-z] [0-9][a-zA-z][0-9]", message="It should follow pattern \"A1B 2RC\".")
+	private String postalCode;
 	
 	private String country;
 	
@@ -89,6 +93,14 @@ public class Student {
 
 	public void setFreePasses(int freePasses) {
 		this.freePasses = freePasses;
+	}
+
+	public String getPostalCode() {
+		return postalCode;
+	}
+
+	public void setPostalCode(String postalCode) {
+		this.postalCode = postalCode;
 	}
 	
 	

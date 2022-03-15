@@ -6,24 +6,34 @@
 <head>
 <title>Student Registration Form</title>
 
-<style>.error{color:red}</style>
+<style>
+.error {
+	color: red
+}
+</style>
 </head>
 
 <body>
-<i>Fill out the below form. Asterisk(*) means it is required. </i>
+	<i>Fill out the below form. Asterisk(*) means it is required. </i>
 	<form:form action="processForm" modelAttribute="student">
 	
 	First Name: <form:input path="firstName" />
 		<br>
 		<br>
 	Last Name(*): <form:input path="lastName" />
-				<form:errors path="lastName" cssClass="error" />
+		<form:errors path="lastName" cssClass="error" />
 		<br>
 		<br>
 		
 	Free passes: <form:input path="freePasses" />
-	<form:errors path="freePasses" class="error" />
-	<br><br>
+		<form:errors path="freePasses" class="error" />
+		<br>
+		<br>
+		
+	Postal Code: <form:input path="postalCode" />
+		<form:errors path="postalCode" class="error" />
+		<br>
+		<br>
 		
 	Country: <form:select path="country">
 			<!--<form:option value="Brazil" label="Brazil" />

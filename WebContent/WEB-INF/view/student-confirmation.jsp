@@ -14,6 +14,10 @@ The student is confirmed: ${student.firstName} ${student.lastName}!
 The student is from: ${student.country}!
 <br><br>
 Free passes: ${student.freePasses }. 
+<br><br>
+Postal Code: ${student.postalCode }.
+<br><br>
+
 The student's favorite language is: ${student.favoriteLanguage}!
 <br><br>
 The students use operating systems: 
