@@ -40,6 +40,11 @@ public class StudentController {
 	public String processForm(@Valid @ModelAttribute("student") Student theStudent, BindingResult bindingResult) {
 
 		System.out.println("Last name: |" + theStudent.getLastName() + "|");
+		
+		System.out.println("Binding result: " + bindingResult);
+		
+		System.out.println("\n\n\n");
+		
 		if (bindingResult.hasErrors()) {
 			return "student-form";
 		} else {

@@ -16,9 +16,10 @@ public class Student {
 	@Size(min=1, message="Last name is required.")
 	private String lastName;
 	
+	@NotNull(message="Value here is required.")
 	@Min(value=0, message="It must be greater than or equal to 0.")
 	@Max(value=10, message="It must be less than or equal to 10.")
-	private int freePasses;
+	private Integer freePasses;
 	
 	@Pattern(regexp="[a-zA-Z][0-9][a-zA-z] [0-9][a-zA-z][0-9]", message="It should follow pattern \"A1B 2RC\".")
 	private String postalCode;
@@ -87,11 +88,11 @@ public class Student {
 		this.operatingSystems = operatingSystems;
 	}
 
-	public int getFreePasses() {
+	public Integer getFreePasses() {
 		return freePasses;
 	}
 
-	public void setFreePasses(int freePasses) {
+	public void setFreePasses(Integer freePasses) {
 		this.freePasses = freePasses;
 	}
 
